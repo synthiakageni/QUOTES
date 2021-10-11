@@ -1,0 +1,23 @@
+<div   class="container-fluid" class="body" >
+    <h2>Bantule Quotes</h2>
+    <hr>
+    <ul>
+      <div *ngFor='let quote of quotes;let i = index'>
+        <li>{{quote.name}} posted on {{quote.datePosted|date}}</li>
+        Upvotes: {{ quote.upVote}} <br>
+        DownVotes: {{ quote.downVote}} <br>
+        
+        <button (click)='upVote(1)' type="button" class="btn btn-outline-primary btn-sm">Upvote</button> 
+        <button (click)='upVote(1)' type="button" class="btn btn-outline-secondary btn-sm">Downvote</button> <br> <br>
+
+        <button class="btn btn-secondary btn-sm" (click)='toggleDetails(i)'>Click to View</button>
+        <app-quote-details *ngIf='quote.showQuote' [quote]='quote' (isComplete)='deleteQuote($event,i)' ></app-quote-details>
+      </div>
+    </ul>
+    
+    <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+</div>
+
+
