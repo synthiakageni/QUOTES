@@ -1,4 +1,9 @@
-h2{
+h1{
     color: blue;
+    font-size: xx-large;
+    font-style: italic;
+}
+.body{
+    background-color:plum;
     font-size: xx-large;
 }
