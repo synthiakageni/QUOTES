@@ -2,6 +2,7 @@
     <h1>Bantule Quotes</h1>
     <hr>
     <ul>
+        <div class="quote"> 
       <div *ngFor='let quote of quotes;let i = index'>
         <li>{{quote.name}} posted on {{quote.datePosted|date}}</li>
         Upvotes: {{ quote.upVote}} <br>
@@ -10,9 +11,10 @@
         <button (click)='upVote(1)' type="button" class="btn btn-outline-primary btn-sm">Upvote</button> 
         <button (click)='upVote(1)' type="button" class="btn btn-outline-secondary btn-sm">Downvote</button> <br> <br>
 
-        <button class="btn btn-secondary btn-sm" (click)='toggleDetails(i)'>Click to View</button>
+        <button class="btn btn-secondary btn-sm" (click)='toggleDetails(i)'>Click to View the quote</button>
         <app-quote-details *ngIf='quote.showQuote' [quote]='quote' (isComplete)='deleteQuote($event,i)' ></app-quote-details>
       </div>
+    </div>
     </ul>
     
     <div class="col-md-6">

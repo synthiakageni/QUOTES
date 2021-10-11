@@ -8,6 +8,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,                               // <========== Add this line!
-    ReactiveFormsModule    
+    ReactiveFormsModule, NgbModule    
 
   ],
   providers: [],
