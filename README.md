@@ -11,7 +11,7 @@ To run the app in your machine or server,use the following steps:
 *  git clone the repo git clone https://github.com/synthiakageni/QUOTES.git
 *  cd "QUOTES" 
 *  code .
-## [Live link]( synthiakageni.github.io/quotes/)
+## [Live link](  https://synthiakageni.github.io/QUOTES/)
 ## Known Bugs
 There are no known bugs
 ## features:
