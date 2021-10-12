@@ -8,8 +8,8 @@
         Upvotes: {{ quote.upVote}} <br>
         DownVotes: {{ quote.downVote}} <br>
         
-        <button (click)='upVote(1)' type="button" class="btn btn-outline-primary btn-sm">Upvote</button> 
-        <button (click)='upVote(1)' type="button" class="btn btn-outline-secondary btn-sm">Downvote</button> <br> <br>
+        <button (click)='upVoteClick()' type="button" class="btn btn-outline-primary btn-sm">{{upVote}} upVote</button> 
+        <button (click)='downVoteClick()' type="button" class="btn btn-outline-secondary btn-sm">{{downVote}} downVote</button> <br> <br>
 
         <button class="btn btn-secondary btn-sm" (click)='toggleDetails(i)'>Click to View the quote</button>
         <app-quote-details *ngIf='quote.showQuote' [quote]='quote' (isComplete)='deleteQuote($event,i)' ></app-quote-details>
