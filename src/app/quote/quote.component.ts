@@ -36,14 +36,17 @@ export class QuoteComponent implements OnInit {
   }
 
   
-  upvotes = 0;
-downvotes = 0;
+  upVote:number = 0;
+downVote:number = 0;
 
-  upVote(quote:any) {
-    quote.upVote = quote.upVote + 1;
+  upVoteClick(){
+  this.upVote++;
     
     }
-    
+    downVoteClick(){
+      this.downVote++;
+
+    }
 
   constructor() { }
 
